@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>App Adega- Login</title>
+
+<body>
+
+<h2>LOGIN/CADASTRO</h2>
+
+<div>
+    <button class="tab-button active" onclick="showTab('login')">Login</button>
+    <button class="tab-button" onclick="showTab('register')">Registrar</button>
+</div>
+
+<div id="login" class="tab tab-content" style="display: block;">
+    <h3>Login</h3>
+    <form action="/login" method="POST">
+        <input type="text" name="username" placeholder="Usuário" required>
+        <input type="password" name="password" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+    </form>
+</div>
+
+<div id="register" class="tab tab-content">
+    <h3>Registrar</h3>
+    <form action="/register" method="POST">
+        <input type="text" name="username" placeholder="Usuário" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Senha" required>
+        <button type="submit">Registrar</button>
+    </form>
+</div>
+
+<script src="../javascript/login.js"></script>
+</body>
+</html>

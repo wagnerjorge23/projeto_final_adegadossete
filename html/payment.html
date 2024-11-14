@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/payment.css">
+    <title>Pagamento</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Pagamento</h1>
+        
+        <div class="payment-option">
+            <input type="radio" id="pix" name="payment" value="pix" onclick="showPaymentDetails('none')">
+            <label for="pix">Pagamento via Pix</label>
+        </div>
+        
+        <div class="payment-option">
+            <input type="radio" id="credit-card" name="payment" value="credit-card" onclick="showPaymentDetails('block', 'credit-card')">
+            <label for="credit-card">Pagamento com Cartão de Crédito</label>
+            <div id="credit-card-details" class="payment-details" style="display: none;">
+                <label for="card-name">Nome no Cartão:</label>
+                <input type="text" id="card-name" placeholder="Nome no cartão">
+                <label for="card-number">Número do Cartão:</label>
+                <input type="text" id="card-number" placeholder="Número do cartão">
+                <label for="card-expiry">Data de Validade:</label>
+                <input type="text" id="card-expiry" placeholder="MM/AA">
+                <label for="card-cvv">CVV:</label>
+                <input type="text" id="card-cvv" placeholder="CVV">
+            </div>
+        </div>
+
+        
+        
+        <div class="payment-option">
+            <input type="radio" id="cash" name="payment" value="cash" onclick="showPaymentDetails('block', 'cash')">
+            <label for="cash">Pagamento na Entrega</label>
+            <div id="cash-details" class="payment-details" style="display: none;">
+                <label for="payment-method">Método de Pagamento:</label>
+                <input type="radio" id="cash-money" name="cash-payment" value="money" onclick="toggleChangeInput(true)">
+                <label for="cash-money">Dinheiro</label>
+                <input type="radio" id="cash-card" name="cash-payment" value="card" onclick="toggleChangeInput(false)">
+                <label for="cash-card">Cartão de Débito</label>
+                <div id="change-container" style="display: none;">
+                    <label for="change">Troco para:</label>
+                    <input type="number" id="change" placeholder="Digite o valor do troco">
+                </div>
+            </div>
+        </div>
+
+        
+        
+        <div class="total">
+            Total: R$ <span id="total-price">0.00</span>
+        </div>
+        <button onclick="submitPayment()">Confirmar Pagamento</button>
+    </div>
+
+    <script src="../javascript/cartPayment.js"></script>
+</body>
+</html>

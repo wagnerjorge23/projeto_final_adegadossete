@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça Seu Pedido - Adega dos 7</title>
+    <link rel="stylesheet" href="../css/pedido.css">
+</head>
+<body>
+    <header>
+        <h1>Adega dos 7</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="pedido.html">Faça Seu Pedido</a></li>
+                <li><a href="pagamento.html">Pagamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Faça Seu Pedido</h2>
+        <form id="order-form">
+            <label for="bebida">Escolha sua bebida:</label>
+            <select id="bebida" name="bebida">
+                <option value="cerveja">Cervejas</option>
+                <option value="Whisky">Whisky</option>
+                <option value="Gin">Gin</option>
+                <option value="Cachaça">Cachaça</option>
+
+            </select>
+
+            <label for="quantity">Quantidade:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1">
+
+            <button type="button" onclick="submitOrder()">Finalizar Pedido</button>
+        </form>
+    </main>
+
+    
+
+    <script src="../javascript/pedido.js"></script>
+</body>
+</html>

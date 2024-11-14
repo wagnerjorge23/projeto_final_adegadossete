@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #7c7256; /* Cor de fundo leve */
+    background: url('../img/bebida7.png') no-repeat center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px;
+    text-align: center;
+}
+.tab {
+    display: none;
+}
+.tab-button {
+    background: black; /* Cor de fundo do botão */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 5px; 
+}
+.tab-button.active {
+    background: black; /* Cor do botão ativo */
+}
+.tab-content {
+    background: white;
+    width: 700px;
+    margin-left: 22%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 25%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+}
+button {
+    background-color: #28a745; /* Cor do botão de submit */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #218838; /* Cor do botão ao passar o mouse */
+}
+h2{
+    background: black;
+    width: 400px;
+    margin-left: 32.5%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    color: #a89f86;
+}

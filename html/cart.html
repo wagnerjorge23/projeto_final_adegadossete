@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cart.css">
+    <title>Carrinho de Compras - Adega</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Carrinho de Compras</h1>
+        <div id="cart-items" class="cart-items"></div>
+
+        <section class="address-form">
+            <h3>Informacoes de Entrega</h3>
+            <form id="delivery-form">
+                <div class="form-group">
+                    <label for="address">Endereco:</label>
+                    <input type="text" id="address" placeholder="Rua, Avenida, etc." required>
+                </div>
+                <div class="form-group">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" placeholder="00000-000" required>
+                </div>
+                <div class="form-group">
+                    <label for="number">Numero:</label>
+                    <input type="text" id="number" placeholder="Numero da casa" required>
+                </div>
+                <div class="form-group">
+                    <label for="reference-point">Ponto de Referencia:</label>
+                    <input type="text" id="reference-point" placeholder="Ex: Proximo a farmacia">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" placeholder="(00) 00000-0000" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+            </form>
+        </section>
+
+        <section class="total">
+            <h3>Resumo do Pedido</h3>
+            <p>Subtotal: R$ <span id="subtotal">0.00</span></p>
+            <p>Taxa de Entrega: R$ 9.90</p>
+            <p>Total: R$ <span id="total-price">0.00</span></p>
+        </section>
+
+        <section class="drinks">
+            <h3>Acompanhamentos</h3>
+            <p>Adicione seus Acompanhamentos!</p>
+            <div class="form-group">
+                <label for="drink-type">Escolha seu refrigerante:</label>
+                <select id="drink-type">
+                    <option value="Limão">Limão</option>
+                    <option value="suco de laranja">Suco de laranja</option>
+                    <option value="redbull">Redbull</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="drink-quantity">Quantidade:</label>
+                <input type="number" id="drink-quantity" value="1" min="1">
+            </div>
+        </section>
+        
+        <button class="checkout-btn" onclick="proceedToPayment()">Finalizar Pedido</button>
+    </div>
+
+    <script src="../javascript/cartPayment.js"></script>
+</body>
+</html>

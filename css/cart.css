@@ -1,0 +1,96 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('../img/bebida7.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+    padding: 20px; /* Diminuí o padding */
+    width: 90%;
+    max-width: 350px; /* Diminuí a largura máxima */
+    margin: 20px;
+}
+
+h1 {
+    margin-bottom: 15px; /* Diminuí o espaço abaixo do título */
+    text-align: center;
+    font-size: 22px; /* Diminuí o tamanho da fonte do título */
+    color: #f8b400;
+}
+
+.address-form {
+    display: flex;
+    flex-direction: column; /* Alinha os elementos em coluna */
+    gap: 12px; /* Espaçamento entre os campos */
+}
+
+.address-form label {
+    font-weight: bold; /* Negrito para as labels */
+}
+
+.address-form input {
+    padding: 8px; /* Diminuí o padding */
+    font-size: 14px; /* Diminuí o tamanho da fonte */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.coupon, .total {
+    margin-top: 15px; /* Diminuí o espaço entre elementos */
+    font-size: 18px; /* Diminuí o tamanho da fonte */
+    font-weight: bold;
+}
+
+.coupon input {
+    width: calc(100% - 20px); /* Ajustei a largura do input */
+    padding: 8px; /* Diminuí o padding */
+    font-size: 14px; /* Diminuí o tamanho da fonte */
+}
+
+button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Diminuí a margem acima do botão */
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.03);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Diminuí o padding em telas menores */
+    }
+
+    h1 {
+        font-size: 20px; /* Título menor em telas pequenas */
+    }
+
+    .total, .coupon {
+        font-size: 16px; /* Texto menor em telas pequenas */
+    }
+}
